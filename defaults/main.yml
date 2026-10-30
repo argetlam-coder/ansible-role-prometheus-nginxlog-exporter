@@ -23,6 +23,12 @@ prometheus_nginxlog_exporter_version: v1.11.0
 prometheus_nginxlog_exporter_uid: ""
 prometheus_nginxlog_exporter_gid: ""
 
+# Controls the user that the container runs as. Set to `0` to run as root.
+prometheus_nginxlog_exporter_container_uid: "{{ prometheus_nginxlog_exporter_uid }}"
+
+# Controls the group that the container runs as. Set to `0` to run as root.
+prometheus_nginxlog_exporter_container_gid: "{{ prometheus_nginxlog_exporter_gid }}"
+
 # The hostname at which prometheus-nginxlog-exporter is served. You don't need to configure it if you're not exposing this.
 prometheus_nginxlog_exporter_hostname: ""
 

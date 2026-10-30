@@ -26,7 +26,7 @@ ExecStartPre={{ devture_systemd_docker_base_host_command_docker }} create \
       --rm \
       --name={{ prometheus_nginxlog_exporter_identifier }} \
       --log-driver=none \
-      --user={{ prometheus_nginxlog_exporter_uid }}:{{ prometheus_nginxlog_exporter_gid }} \
+      --user={{ prometheus_nginxlog_exporter_container_uid }}:{{ prometheus_nginxlog_exporter_container_gid }} \
       --cap-drop=ALL \
       --read-only \
       --network={{ prometheus_nginxlog_exporter_container_network }} \
